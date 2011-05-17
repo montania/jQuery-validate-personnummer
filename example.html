@@ -1,27 +1,47 @@
 <!DOCTYPE html>
 <head>
-  <title>Example</title>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>jQuery validate personnummer example</title>
+	<meta charset="utf-8">
+	<style type="text/css">	
+		label.error {
+			border: double 1px #a00;
+			background-color: #ffcccc;
+			padding: 5px;
+			margin-left: 10px;
+		}
+		form {
+			border: double 10px #ccc;
+			padding: 10px;
+			width: 450px;
+		}
+		h1 {
+			color: #444;
+		}
+</style>
 </head>
 <body>
-  <form id="myForm">
-    <input type="text" name="myInput" id="myInput" />
-    <br /><br />
-    <input type="submit" value="submit" />
-  </form>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
-  <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
-  <script type="text/javascript" src="jquery.validate.personnummer.min.js"></script>
-  <script type="text/javascript">
-  $("#myForm").validate({  
-      rules: {  
-          myInput: {  
-              personnummer: true  
-          }  
-      }, 
-      messages: {  
-          myInput: "OMG no!! Incorrect personnummer!"  
-      }  
-  });  
-  </script>  
+	<h1>jQuery validate personnummer example</h1>
+	<form id="myForm">
+		<label for="myInput">Just enter your personnummer</label>
+		<br/>
+		<input type="text" name="myInput" id="myInput" />
+		<br />
+		<br />
+		<input type="submit" />
+	</form>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.validate/1.8/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="jquery.validate.personnummer.min.js"></script>
+	<script type="text/javascript">
+		$("#myForm").validate({
+			rules: {
+				myInput: {
+					personnummer: true
+				}
+			},
+			messages: {
+				myInput: "Sorry! That's not a valid personnummer!"
+			}
+		});
+	</script>
 </body>
