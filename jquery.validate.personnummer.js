@@ -18,6 +18,11 @@
 
 $.validator.addMethod("personnummer", function (value, element) {
 
+  // Allow empty values, should be handled by the required attribute
+  if ( value.length == 0 ) {
+    return true;
+  }
+
   // Remove dash
   value = value.replace("-", "");
   var check = parseInt(value.substr(9, 1), 10);  
