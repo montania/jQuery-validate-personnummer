@@ -23,8 +23,8 @@ $.validator.addMethod("personnummer", function (value) {
     return true;
   }
 
-  // Remove dash
-  value = value.replace("-", "");
+  // Remove dash and plus
+  value = value.replace("-", "").replace("+", "");
 
   // Remove century and check number
   if (value.length == 12) {
