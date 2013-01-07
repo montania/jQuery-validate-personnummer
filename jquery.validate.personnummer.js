@@ -28,14 +28,16 @@ $.validator.addMethod("personnummer", function (value) {
 
   // Remove century and check number
   if (value.length == 12) {
-    value = value.substr(2, 9);
+    value = value.substr(2, 10);
   } else if (value.length == 10) {
-    value = value.substr(0, 9);
+    value = value.substr(0, 10);
   } else {
     return false;
   }
-
+  // Remove check number
   var check = parseInt(value.substr(9, 1), 10);
+  value = value.substr(0, 9);
+
   var result = 0;
   
   // Calculate check number
