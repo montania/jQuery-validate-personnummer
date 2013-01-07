@@ -16,7 +16,7 @@
  * limitations under the License.  
  */  
 
-$.validator.addMethod("personnummer", function (value, element) {
+$.validator.addMethod("personnummer", function (value) {
 
   // Allow empty values, should be handled by the required attribute
   if ( value.length == 0 ) {
@@ -25,9 +25,8 @@ $.validator.addMethod("personnummer", function (value, element) {
 
   // Remove dash
   value = value.replace("-", "");
-  var check = parseInt(value.substr(9, 1), 10);  
-  
-  // Remove century and check number  
+
+  // Remove century and check number
   if (value.length == 12) {
     value = value.substr(2, 9);
   } else if (value.length == 10) {
@@ -35,11 +34,12 @@ $.validator.addMethod("personnummer", function (value, element) {
   } else {
     return false;
   }
-  
+
+  var check = parseInt(value.substr(9, 1), 10);
   var result = 0;
   
   // Calculate check number
-  for (var i = 0; i < value.length; i++) {        
+  for (var i = 0, len = value.length; i < len; i++) {
     
     var tmp = parseInt(value.substr(i, 1), 10);
         
