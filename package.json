@@ -1,0 +1,31 @@
+{
+    "name": "jQuery-validate-personnummer",
+    "version": "1.1.0",
+    "description": "Validate personnummer with jQuery validation",
+    "main": "jquery.validate.personnummer.js",
+    "dependencies": {
+        "grunt": "~0.4.4",
+        "grunt-contrib-uglify": "~0.4.0",
+        "grunt-contrib-concat": "~0.4.0",
+        "grunt-contrib-jshint": "~0.10.0"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/montania/jQuery-validate-personnummer.git"
+    },
+    "keywords": [
+        "jQuery",
+        "validate",
+        "personnummer"
+    ],
+    "author": "Montania System AB",
+    "license": "Apache 2.0",
+    "bugs": {
+        "url": "https://github.com/montania/jQuery-validate-personnummer/issues"
+    },
+    "homepage": "https://github.com/montania/jQuery-validate-personnummer"
+}

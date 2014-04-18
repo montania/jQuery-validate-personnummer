@@ -1,0 +1,30 @@
+{
+    "name": "jQuery-validate-personnummer",
+    "version": "1.1.0",
+    "homepage": "https://github.com/montania/jQuery-validate-personnummer",
+    "authors": [
+        "Montania System AB"
+    ],
+    "description": "Validate personnummer with jQuery validation",
+    "main": "jquery.validate.personnummer.js",
+    "moduleType": [
+        "globals"
+    ],
+    "keywords": [
+        "jQuery",
+        "validate",
+        "personnummer"
+    ],
+    "license": "Apache 2.0",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "luhnar": "~1.0.0"
+    }
+}
